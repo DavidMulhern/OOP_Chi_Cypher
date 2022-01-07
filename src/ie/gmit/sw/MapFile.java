@@ -7,13 +7,27 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
+/**
+ * @author David Mulhern
+ * @version 1.0
+ * @since 1.8
+ * 
+ * MapFile class, this class is used to parse files.
+ *It handles both the monogram file - returning a HashMap of characters and their probable occurences
+ *It will also read in a local file (path specified by user)  and return it as a string
+ */
 public class MapFile {
 
-	private String filePath = "../OOP_FinalProj/monograms-ASCII-32-127.txt";
+	// NOTE: When I created my jar file. I changed the filePath to: "./monograms-ASCII-32-127.txt". Using the below path when in eclipse. .Jar now works!
+	private String filePath = "src/ie/gmit/sw/monograms-ASCII-32-127.txt";
 	private double probable;
 	private HashMap<Character, Double> map = new HashMap<>();
 	
 	// This method will return a HashMap once the monogram file is parsed and probabilities are assigned - divided by 100d
+	/**
+	 * mapTheFile is used for parsing the monogram file
+	 * @return Resturns a HashMap, containing english text characters and their probable occurrence values
+	 */
 	public HashMap<Character, Double> mapTheFile() {
 		BufferedReader br = null;
 		
@@ -57,9 +71,15 @@ public class MapFile {
 	}
 	
 	// This function will return a string from a local file. User MUST type in directory path to local file
+	/**
+	 * This function reads in a local file.
+	 * @param filePath The string the user typed in, which should be a path directory string
+	 * @return returns a new String of the file contents
+	 * @throws FileNotFoundException Exception should file not be found
+	 */
 	public String readFile(String filePath) throws FileNotFoundException {
 		
-		// ../OOP_FinalProj/cypher.txt - is my input on console when option 4 is pressed
+		// ../OOP_FinalProj/cypher.txt - was my input on console when option 4 is pressed
 		
 		StringBuilder builder = new StringBuilder();
 		

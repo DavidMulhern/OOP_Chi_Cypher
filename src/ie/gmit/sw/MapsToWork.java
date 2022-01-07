@@ -2,7 +2,15 @@ package ie.gmit.sw;
 
 import java.util.concurrent.*;
 
-// This class allows threads to decrypt
+/**
+ * @author David Mulhern
+ * @version 1.0
+ * @since 1.8
+ * 
+ * MapsToWork class, this class handles decryption requests
+ * Implements the Callable interface
+ * Once decryption is complete, it will return a future String, which populates a List in runner
+ */
 public class MapsToWork implements Callable<String> {
 	
 	// Private variables, assigned via constructor

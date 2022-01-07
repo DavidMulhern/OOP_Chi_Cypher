@@ -14,8 +14,17 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author David Mulhern
+ * @version 1.0
+ * @since 1.8
+ * 
+ * The Runner class 
+ * contains the main method
+ * creates and maintains objects of other classes
+ * controls flow via user input
+ */
 public class Runner {
-	
 	// Stores either encrypted or decrypted values
 	private static String answer;
 	// Text to be encrypted
@@ -130,7 +139,7 @@ public class Runner {
 		Scanner scan = new Scanner(System.in);
 		
 		// random number gen for member ID
-		int randomKey = ThreadLocalRandom.current().nextInt(0, 10+1);
+		int randomKey = ThreadLocalRandom.current().nextInt(1, 9+1);
 		// System.out.println(randomKey);
 		key = randomKey;
 		

@@ -1,5 +1,14 @@
 package ie.gmit.sw;
 
+/**
+ * @author David Mulhern
+ * @version 1.0
+ * @since 1.8
+ * 
+ * Encrypt class, inherits the getCracking method from Cypher
+ * This class constructor takes a key and sentence
+ * Depending on the key value, it will return a new string which it constucts by using a ceaser cypher, in turn encrypting it.
+ */
 public class Encrypt extends Cypher {
 
 	private int key;

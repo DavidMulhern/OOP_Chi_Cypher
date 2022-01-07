@@ -1,5 +1,15 @@
 package ie.gmit.sw;
 
+/**
+ * @author David Mulhern
+ * @version 1.0
+ * @since 1.8
+ * 
+ * Abstract class, which models for programs using cyphering tools
+ * 
+ * See Decrypt
+ * See Encrypt
+ */
 public abstract class Cypher implements Crackable {
 
 	// classes that extend me will deal with/implement this method

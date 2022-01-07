@@ -2,6 +2,14 @@ package ie.gmit.sw;
 
 import java.util.HashMap;
 
+/**
+ * @author David Mulhern
+ * @version 1.0
+ * @since 1.8
+ * 
+ * CharOccurrence class, this class takes in a string and returns a HashMap.
+ * The string gets broken down into an array and in turn gets stored to a new HashMap, which then gets returned.
+ */
 public class CharOccurrence {
 	
     // Creating a HashMap containing char
@@ -9,6 +17,11 @@ public class CharOccurrence {
 	private HashMap<Character, Integer> charCountMap = new HashMap<Character, Integer>();
 	
 	// This method will return a map of character occurrences
+	/**
+	 * This function is used to count the common characters within a string
+	 * @param inputString
+	 * @return Returns a HashMap, containing characters and their occurrences
+	 */
     public HashMap<Character, Integer> characterCount(String inputString)
     {
         // Converting given string to char array
@@ -32,7 +45,5 @@ public class CharOccurrence {
         tempMap = charCountMap;
         // Returning a copy
         return tempMap;
-
     }
-
 }
